@@ -1,17 +1,31 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const Header = () => {
+  const [user, setUser] = useState(true)
+
   return (
     <header style={{ backgroundColor:"lightblue"}}>
       <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="imagen de logo" />
       <nav>
         <ul>
           {/*cambiar elementos a por componentes Link de react-router-dom*/}
-          <li><Link to="/">inicio</Link></li>
-          <li><Link to="/dashboard">dashboard</Link></li>
-          <li><Link to="/login">login</Link></li>
-          <li><Link to="/registrate">registrate</Link></li>
-          <button>cerrar sesion</button>
+          {
+            user && <>
+              <li><Link to="/">inicio</Link></li>
+              <li><Link to="/dashboard">dashboard</Link></li>
+              <button>cerrar sesion</button>
+            </>
+          }
+          {
+            !user && <>
+              <li><Link to="/login">login</Link></li>
+              <li><Link to="/registrate">registrate</Link></li>
+            </>
+          }
+          
+          
+          
         </ul>
       </nav>
     </header>
