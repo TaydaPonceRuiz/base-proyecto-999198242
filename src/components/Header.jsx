@@ -3,7 +3,11 @@ import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
 
 const Header = () => {
-  const { user } = useAuth()
+  const { user, logout } = useAuth()
+
+  const handleLogout = () => {
+    logout()
+  }
 
   return (
     <header style={{ backgroundColor:"lightblue"}}>
@@ -15,7 +19,7 @@ const Header = () => {
             user && <>
               <li><Link to="/">inicio</Link></li>
               <li><Link to="/dashboard">dashboard</Link></li>
-              <button>cerrar sesion</button>
+              <button onClick={handleLogout}>cerrar sesion</button>
             </>
           }
           {
