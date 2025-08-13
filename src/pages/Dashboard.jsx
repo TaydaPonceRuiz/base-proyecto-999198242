@@ -52,7 +52,7 @@ const Dashboard = () => {
     <Layout>
       <h1>hola desde dashboard</h1>
 
-      <section>
+      <section className="cajita">
         <h2>Cargar nuevo producto</h2>
         <form onSubmit={handleSubmit}>
           <div>

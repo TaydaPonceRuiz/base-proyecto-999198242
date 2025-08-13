@@ -1,13 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 .error{
   color: red;
 }
 
 .popup-edit{
-  background-color: yellowgreen;
+  background-color: #0b3801;
   padding: 20px;
 }
 
-input, textarea{
-  display: block;
-  padding: 5px;
+body{
+  background-color: #c4f0c2;
+  color: #0b3801;
+  text-align: center;
 }
+
+h1, h2 , h3 ,h4 ,h5 ,h6, p{
+  font-family: "Press Start 2p";
+  font-size: smaller;
+}
+
+.contenedor-productos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.producto{
+  border: 1px solid;
+  padding: 1rem;
+  width: 200px;
+}
+
+.cajita{
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 50px;
+}
+
+
+@media (max-width: 880px) {}
+@media (max-width: 480) {}

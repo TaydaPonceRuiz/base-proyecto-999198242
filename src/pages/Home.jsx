@@ -86,30 +86,30 @@ const Home = () => {
   return (
     <Layout>
       <section>
-        <h1>Bienvenido a Nuestra Tienda</h1>
+        <h1>BIENVENIDO A NUESTRA TIENDA</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section>
-        <h2>¿Por qué elegirnos?</h2>
+        <h2>¿POR QUE ELEGIRNOS?</h2>
         <ul>
           <li>
-            <h3>Envíos a todo el país</h3>
+            <h3>ENVIOS AL TODO EL PAIS</h3>
             <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
           </li>
           <li>
-            <h3>Pagos seguros</h3>
+            <h3>PAGOS SEGUROS</h3>
             <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
           </li>
           <li>
-            <h3>Atención personalizada</h3>
+            <h3>ATENCION PERSONALIZADA</h3>
             <p>Estamos disponibles para ayudarte en todo momento.</p>
           </li>
         </ul>
       </section>
 
       <section>
-        <h2>Nuestros productos</h2>
+        <h2> NUESTROS PRODUCTOS</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
 
 
@@ -152,9 +152,9 @@ const Home = () => {
           </section>
         }
 
-        <div>
+        <div className="contenedor-productos">
           {
-            products.map((product) => <div key={product.id}>
+            products.map((product) => <div key={product.id} className="producto">
               <h2 key={product.id}>{product.title}</h2>
               <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
               <p>${product.price}</p>
