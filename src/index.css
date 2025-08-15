@@ -21,6 +21,9 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
   font-family: "Press Start 2p";
   font-size: smaller;
 }
+.bienvenido{
+  padding: 40px;
+}
 
 .contenedor-productos{
   display: flex;
@@ -36,11 +39,14 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
 
 .cajita{
   border: 1px solid;
-  border-radius: 20px;
-  padding: 20px;
-  margin: 50px;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 20px;
 }
 
+.pregunta{
+  padding: 40px;
+}
 
 @media (max-width: 880px) {}
 @media (max-width: 480) {}

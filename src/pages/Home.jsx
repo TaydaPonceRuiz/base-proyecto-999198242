@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
+import { data } from "react-router-dom"
 
 const Home = () => {
   const [products, setProducts] = useState([])
   const [showPopup, setShowPopup] = useState(null)
   const [productToEdit, setProductToEdit] = useState(null)
+  const [search, setSearch] = useState ("")
   const [titleEdit, setTitleEdit] = useState("")
   const [priceEdit, setPriceEdit] = useState("")
   const [descriptionEdit, setDescriptionEdit] = useState("")
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
+
+  const [users, setUsers] = useState([])
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
@@ -25,6 +29,17 @@ const Home = () => {
   useEffect(() => {
     fetchingProducts()
   }, [])
+
+  // barra de busqueda
+  // const searcher = (e) => {
+  //   setSearch(e.target.value)
+  //   console.log(e.target.value)
+  // }
+  // if (!search) {
+  //   products = 
+  // } else {
+  //   products = users.filter((dato) => dato.name.toLowerCase().includes(search.toLocaleLowerCase()))
+  // }
 
   const handleDelete = async (id) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
@@ -86,13 +101,13 @@ const Home = () => {
   return (
     <Layout>
       <section>
-        <h1>BIENVENIDO A NUESTRA TIENDA</h1>
+        <h1 className="bienvenido">BIENVENIDO A NUESTRA TIENDA</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
 
       <section>
-        <h2>¿POR QUE ELEGIRNOS?</h2>
-        <ul>
+        <h2 className="pregunta">¿POR QUE ELEGIRNOS?</h2>
+        <ul className="propuesta">
           <li>
             <h3>ENVIOS AL TODO EL PAIS</h3>
             <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
@@ -112,6 +127,7 @@ const Home = () => {
         <h2> NUESTROS PRODUCTOS</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
 
+        {/* <input value={search} onChange={searcher} type="text" placeholder="search" /> */}
 
         {
           showPopup && <section className="popup-edit">

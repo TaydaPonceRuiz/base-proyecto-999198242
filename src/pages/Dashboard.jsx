@@ -18,7 +18,7 @@ const Dashboard = () => {
     }
 
     if (name.length < 3) {
-      setError("el nombre tener al menos 4 caracteres")
+      setError("el nombre debe tener al menos 4 caracteres")
       return
     }
 

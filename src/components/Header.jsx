@@ -11,21 +11,21 @@ const Header = () => {
 
   return (
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Navbar</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
               { 
                 user && <>
-                  <li class="nav-item">
-                    <Link class="nav-link active" aria-current="page" to="/">inicio</Link>
+                  <li className="nav-item">
+                    <Link className="nav-link active" aria-current="page" to="/">inicio</Link>
                   </li>
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/dashboard">dashboard</Link>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/dashboard">dashboard</Link>
                   </li>
                   <button onClick={handleLogout}>cerrar sesion</button>
                 </>
@@ -33,11 +33,11 @@ const Header = () => {
               
               {
                 !user && <>
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/login">login</Link>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">login</Link>
                   </li>
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/registrate">registrate</Link>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/registrate">registrate</Link>
                   </li>
                 </>
               }
@@ -47,7 +47,7 @@ const Header = () => {
         </div>
       </nav>
 
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="imagen de logo" />
+      <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Dino_non-birthday_version.gif" alt="imagen de logo" />
     </header>
   )
 }
