@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
-import { data } from "react-router-dom"
+
 
 const Home = () => {
   const [products, setProducts] = useState([])
   const [showPopup, setShowPopup] = useState(null)
   const [productToEdit, setProductToEdit] = useState(null)
-  const [search, setSearch] = useState ("")
   const [titleEdit, setTitleEdit] = useState("")
   const [priceEdit, setPriceEdit] = useState("")
   const [descriptionEdit, setDescriptionEdit] = useState("")
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
 
-  const [users, setUsers] = useState([])
+  const [searchTerm, setSearchTerm] = useState("")
+  const filteredItems = products.filter((product) => {
+    const search = searchTerm.toLocaleLowerCase()
+    return (
+      product.title.toLowerCase().includes(search)
+    )
+  })
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
@@ -30,16 +35,6 @@ const Home = () => {
     fetchingProducts()
   }, [])
 
-  // barra de busqueda
-  // const searcher = (e) => {
-  //   setSearch(e.target.value)
-  //   console.log(e.target.value)
-  // }
-  // if (!search) {
-  //   products = 
-  // } else {
-  //   products = users.filter((dato) => dato.name.toLowerCase().includes(search.toLocaleLowerCase()))
-  // }
 
   const handleDelete = async (id) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
@@ -127,7 +122,12 @@ const Home = () => {
         <h2> NUESTROS PRODUCTOS</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
 
-        {/* <input value={search} onChange={searcher} type="text" placeholder="search" /> */}
+        <input
+            type="text"
+            placeholder="Buscar..."
+            value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
 
         {
           showPopup && <section className="popup-edit">
@@ -170,7 +170,7 @@ const Home = () => {
 
         <div className="contenedor-productos">
           {
-            products.map((product) => <div key={product.id} className="producto">
+            filteredItems.map((product) => <div key={product.id} className="producto">
               <h2 key={product.id}>{product.title}</h2>
               <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
               <p>${product.price}</p>
