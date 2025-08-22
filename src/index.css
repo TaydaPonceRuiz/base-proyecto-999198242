@@ -28,7 +28,8 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
 .contenedor-productos{
   display: flex;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 20px;
+  text-align: center;
 }
 
 .producto{
@@ -46,6 +47,24 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
 
 .pregunta{
   padding: 40px;
+}
+
+.producto-titulo{
+  font-size: 10px;
+}
+.producto-img{
+  width: 80px;
+}
+.producto-precio{
+  font-size: 10px;
+}
+.producto-descripcion{
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.producto-categoria{
+  font-size: 10px;
+  font-style: italic;
 }
 
 @media (max-width: 880px) {}

@@ -171,11 +171,11 @@ const Home = () => {
         <div className="contenedor-productos">
           {
             filteredItems.map((product) => <div key={product.id} className="producto">
-              <h2 key={product.id}>{product.title}</h2>
-              <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-              <p>${product.price}</p>
-              <p>{product.description}</p>
-              <p><strong>{product.category}</strong></p>
+              <h2 className="producto-titulo" key={product.id}>{product.title}</h2>
+              <img className="producto-img" src={product.image} alt={`Imagen de ${product.title}`} />
+              <p className="producto-precio">${product.price}</p>
+              <p className="producto-descripcion">{product.description.substring(0,100)}</p>
+              <p className="producto-categoria"><strong>{product.category}</strong></p>
               {
                 user && <div>
                   <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
