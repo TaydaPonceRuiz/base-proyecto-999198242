@@ -6,6 +6,12 @@
   color: red;
 }
 
+.imagen{
+  padding: 40px;
+  width: 1000px;
+  height: 500px;
+}
+
 .popup-edit{
   background-color: #0b3801;
   padding: 20px;
@@ -40,13 +46,52 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
 
 .cajita{
   border: 1px solid;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
 }
+.cajita2{
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 250px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.cajita3{
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+
 
 .pregunta{
   padding: 40px;
+}
+
+.buscar{
+  margin: 40px;
 }
 
 .producto-titulo{
@@ -67,5 +112,16 @@ h1, h2 , h3 ,h4 ,h5 ,h6, p{
   font-style: italic;
 }
 
-@media (max-width: 880px) {}
-@media (max-width: 480) {}
+
+@media (max-width: 880px) {
+  .imagen{
+    width: 700px;
+    height: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .imagen{
+    width: 400px;
+    height: 200px;
+  }
+}

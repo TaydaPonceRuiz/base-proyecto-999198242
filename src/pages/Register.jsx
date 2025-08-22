@@ -36,7 +36,7 @@ const Register = () => {
     <Layout>
       <h1>registrate</h1>
 
-      <section>
+      <section className="cajita3">
         <h2>hola, bienvenido</h2>
         <form onSubmit={handleSubmit}>
           <div>

@@ -26,7 +26,7 @@ const Login = () => {
     <Layout>
       <h1>inicia sesion</h1>
 
-      <section>
+      <section className="cajita2">
         <h2>hola, bienvenido de nuevo</h2>
         <p>johnd, m38rmF$</p>
         <form onSubmit={handleLogin}>

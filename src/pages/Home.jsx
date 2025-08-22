@@ -122,7 +122,7 @@ const Home = () => {
         <h2> NUESTROS PRODUCTOS</h2>
         <p>Elegí entre nuestras categorías más populares.</p>
 
-        <input
+        <input className="buscar"
             type="text"
             placeholder="Buscar..."
             value={searchTerm}
