@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <p>sitio desarrolado por <a href="https://github.com/TaydaPonceRuiz?tab=repositories" target="_blank">tayda ponce ruiz</a></p>
     </footer>
   )

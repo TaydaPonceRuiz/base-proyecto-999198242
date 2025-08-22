@@ -102,16 +102,16 @@ const Home = () => {
 
       <section>
         <h2 className="pregunta">¿POR QUE ELEGIRNOS?</h2>
-        <ul className="propuesta">
-          <li>
+        <ul>
+          <li className="propuesta">
             <h3>ENVIOS AL TODO EL PAIS</h3>
             <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
           </li>
-          <li>
+          <li className="propuesta">
             <h3>PAGOS SEGUROS</h3>
             <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
           </li>
-          <li>
+          <li className="propuesta">
             <h3>ATENCION PERSONALIZADA</h3>
             <p>Estamos disponibles para ayudarte en todo momento.</p>
           </li>
